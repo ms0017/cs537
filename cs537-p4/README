@@ -1,0 +1,30 @@
+Project Description: http://pages.cs.wisc.edu/~bart/537/programs/program4.html
+
+The three executables are built via "make 537pfsim-fifo", "make 537pfsim-lru", and "make 537pfsim-clock"
+
+
+We implement algorithm_module.h in three different ways. Each implements its own replacement policy
+
+reader.c: Runs the program, implements the simulator 
+
+FIFO
+FIFO.c/h: Implements the basic FIFO algorithm functions
+algorithm_module_fifo: Implements replacement policy interface for FIFO
+
+CLOCK
+CLOCK.c/h: Implements the basic clock algorithm functions
+algorithm_module_clock: Implement replacement policy interface for CLOCK
+
+LRU
+LRU.c/h: Implements the basic LRU algorithm functions
+algorithm_module_lru: Implement replacment polocy interface for LRU
+
+
+global.c/h: Conains data structures use by all page replacement implementations. 
+
+
+parse_trace.c: Parses trace file for input
+
+statistics.c: Calculates statistics used by reader
+
+

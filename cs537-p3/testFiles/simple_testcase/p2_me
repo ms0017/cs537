@@ -1,0 +1,208 @@
+1 all: prog1 prog2 prog3 
+1 prog1 : main1.o queue.o reader.o writer.o 
+echo Building prog1 
+gcc -o prog1 main1.o queue.o reader.o writer.o 
+echo prog1 build successfully 
+1 prog2: main2.o queue.o reader.o parser.o 
+echo Building prog2 
+gcc -o prog2 main2.o queue.o reader.o parser.o 
+echo prog2 build successfully 
+1 prog3: main3.o process1.o process2.o graph.o djikstra.o 
+echo Building prog3 
+gcc -o prog3 main3.o process1.o process2.o graph.o djikstra.o 
+echo prog3 built successfully 
+1 main1.o: main1.c queue.h reader.h writer.h 
+echo Building main1.o! 
+gcc -c main1.c 
+1 main1.c : main_1_draft.c 
+cp main_1_draft.c main1.c 
+1 reader.o : reader.c reader.h queue.h 
+echo Building reader.o! 
+gcc -c reader.c 
+1 main2.o: main2.c queue.h writer.h 
+echo Building main2.o! 
+gcc -c main2.c 
+1 queue.o: queue.c queue.h 
+echo Building queue.o! 
+gcc -c queue.c 
+1 writer.o: writer.c writer.h queue.h 
+echo Building writer.o! 
+gcc -c writer.c 
+1 parser.o: parser.c parser.h 
+echo Building Parser! 
+gcc -c parser.c 
+1 main3.o: main3.c process1.h process2.h graph.h djikstra.h 
+echo Building main3.o! 
+gcc -c main3.c 
+1 process1.o: process1.c process1.h graph.h djikstra.h 
+echo Building process1.o! 
+gcc -c process1.c 
+1 process2.o: process2.c process2.h graph.h djikstra.h 
+echo Building process2.o! 
+gcc -c process2.c 
+1 graph.o : graph.c graph.h 
+echo BUILDING graph.o !!!!! !!!!! 
+gcc -c graph.c 
+1 djikstra.o: djikstra.c djikstra.h graph.h 
+echo building djikstra.o! 
+gcc -c djikstra.c 
+1 clean_objs: 
+rm main1.o 
+rm queue.o 
+rm reader.o 
+rm writer.o 
+rm main2.o 
+rm parser.o 
+rm main3.o 
+rm process1.o 
+rm process2.o 
+rm graph.o 
+rm djikstra.o 
+rm main1.c 
+1 clean_prog1: 
+rm prog1 
+1 clean_prog2: 
+rm prog2 
+1 clean_prog3: 
+rm prog3 
+1 clean: clean_objs clean_prog1 clean_prog2 clean_prog3 
+11echogccecho1echogccecho1echogccecho1echogcc1cp1echogcc1echogcc1echogcc1echogcc1echogcc1echogcc1echogcc1echogcc1echogcc1echogcc1rmrmrmrmrmrmrmrmrmrmrmrm1rm1rm1rm1|all| 0
+|prog1| 3
+|prog2| 3
+|prog3| 3
+|main1.o| 2
+|main1.c| 1
+|reader.o| 2
+|main2.o| 2
+|queue.o| 2
+|writer.o| 2
+|parser.o| 2
+|main3.o| 2
+|process1.o| 2
+|process2.o| 2
+|graph.o| 2
+|djikstra.o| 2
+|clean_objs| 12
+|clean_prog1| 1
+|clean_prog2| 1
+|clean_prog3| 1
+|clean| 0
+***TargetName: all***
+***TargetName: prog1***
+***TargetName: prog2***
+***TargetName: prog3***
+***TargetName: main1.o***
+***TargetName: main1.c***
+***TargetName: reader.o***
+***TargetName: main2.o***
+***TargetName: queue.o***
+***TargetName: writer.o***
+***TargetName: parser.o***
+***TargetName: main3.o***
+***TargetName: process1.o***
+***TargetName: process2.o***
+***TargetName: graph.o***
+***TargetName: djikstra.o***
+***TargetName: clean_objs***
+***TargetName: clean_prog1***
+***TargetName: clean_prog2***
+***TargetName: clean_prog3***
+***TargetName: clean***
+***TargetName: all***
+dependence: prog1
+dependence: prog2
+dependence: prog3
+***TargetName: prog1***
+dependence: main1.o
+dependence: queue.o
+dependence: reader.o
+dependence: writer.o
+***TargetName: prog2***
+dependence: main2.o
+dependence: queue.o
+dependence: reader.o
+dependence: parser.o
+***TargetName: prog3***
+dependence: main3.o
+dependence: process1.o
+dependence: process2.o
+dependence: graph.o
+dependence: djikstra.o
+***TargetName: main1.o***
+dependence: main1.c
+dependence: queue.h
+dependence: reader.h
+dependence: writer.h
+***TargetName: main1.c***
+dependence: main_1_draft.c
+***TargetName: reader.o***
+dependence: reader.c
+dependence: reader.h
+dependence: queue.h
+***TargetName: main2.o***
+dependence: main2.c
+dependence: queue.h
+dependence: writer.h
+***TargetName: queue.o***
+dependence: queue.c
+dependence: queue.h
+***TargetName: writer.o***
+dependence: writer.c
+dependence: writer.h
+dependence: queue.h
+***TargetName: parser.o***
+dependence: parser.c
+dependence: parser.h
+***TargetName: main3.o***
+dependence: main3.c
+dependence: process1.h
+dependence: process2.h
+dependence: graph.h
+dependence: djikstra.h
+***TargetName: process1.o***
+dependence: process1.c
+dependence: process1.h
+dependence: graph.h
+dependence: djikstra.h
+***TargetName: process2.o***
+dependence: process2.c
+dependence: process2.h
+depBuilding main1.o!
+Building queue.o!
+Building reader.o!
+Building writer.o!
+Building prog1
+prog1 build successfully
+Building main2.o!
+Building queue.o!
+Building reader.o!
+Building Parser!
+Building prog2
+prog2 build successfully
+Building main3.o!
+Building process1.o!
+Building process2.o!
+BUILDING graph.o !!!!! !!!!!
+building djikstra.o!
+Building prog3
+prog3 built successfully
+endence: graph.h
+dependence: djikstra.h
+***TargetName: graph.o***
+dependence: graph.c
+dependence: graph.h
+***TargetName: djikstra.o***
+dependence: djikstra.c
+dependence: djikstra.h
+dependence: graph.h
+***TargetName: clean_objs***
+***TargetName: clean_prog1***
+***TargetName: clean_prog2***
+***TargetName: clean_prog3***
+***TargetName: clean***
+dependence: clean_objs
+dependence: clean_prog1
+dependence: clean_prog2
+dependence: clean_prog3
+exited this 
+*************************

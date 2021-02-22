@@ -1,0 +1,37 @@
+Project Description: http://pages.cs.wisc.edu/~bart/537/programs/program3.html
+
+
+Basic Idea: 
+This project emulates the make command. It allows users to specify their
+make file and the target they want to make, otherwise it makes the 
+first target in the file. 
+
+Different ways to run: 
+537make <target name>
+537make -f <file name> <target name>
+537make <target name> -f <file name>
+
+
+
+Modules: 
+
+graph
+This is the main driver of the program. Additionally, it contains functions that implement
+cycle detection, post order traversal for making a target, and populating the TargetData
+structs. 
+
+
+data_structures
+This file contains a stack implementation and TargetData implementation. 
+The stack is used in cycle detection algo in graph and TargetData stores information
+of the makefile (including each target's commands and dependencies) 
+
+run_command
+This file runs a command via fork and execvp. 
+
+reader
+The file parses the makefile. It returns each line with words space separated. 
+
+time_diff
+The module determines whether the target file was modified after another file 
+

@@ -1,0 +1,17 @@
+|all| 4
+|prog2| 3
+|prog3| 3
+|ma.in1.o| 7
+|main2.o| 2
+|queue.o| 2
+|writer.o| 2
+|parser.o| 2
+|main3.o| 2
+|process1.o| 2
+|process2.o| 5
+|djikstra.o| 2
+|clean_objs| 12
+|clean_prog1| 1
+|clean_prog2| 1
+|clean_prog3| 1
+|clean| 0

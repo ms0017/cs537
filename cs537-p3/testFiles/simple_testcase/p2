@@ -1,0 +1,49 @@
+cp main_1_draft.c main1.c
+echo Building main1.o!
+Building main1.o!
+gcc -c main1.c
+echo Building queue.o!
+Building queue.o!
+gcc -c queue.c
+echo Building reader.o!
+Building reader.o!
+gcc -c reader.c
+echo Building writer.o!
+Building writer.o!
+gcc -c writer.c
+echo Building prog1
+Building prog1
+gcc -o prog1 main1.o queue.o reader.o writer.o
+echo prog1 build successfully
+prog1 build successfully
+echo Building main2.o!
+Building main2.o!
+gcc -c main2.c
+echo Building Parser!
+Building Parser!
+gcc -c parser.c
+echo Building prog2
+Building prog2
+gcc -o prog2 main2.o queue.o reader.o parser.o
+echo prog2 build successfully
+prog2 build successfully
+echo Building main3.o!
+Building main3.o!
+gcc -c main3.c
+echo Building process1.o!
+Building process1.o!
+gcc -c process1.c
+echo Building process2.o!
+Building process2.o!
+gcc -c process2.c
+echo BUILDING graph.o !!!!! !!!!!
+BUILDING graph.o !!!!! !!!!!
+gcc -c graph.c
+echo building djikstra.o!
+building djikstra.o!
+gcc -c djikstra.c
+echo Building prog3
+Building prog3
+gcc -o prog3 main3.o process1.o process2.o graph.o djikstra.o
+echo prog3 built successfully
+prog3 built successfully
